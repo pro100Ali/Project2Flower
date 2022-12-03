@@ -12,8 +12,10 @@ class MainViewController: ViewController {
     lazy private var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.layer.cornerRadius = 40
+        table.separatorStyle = .none
         table.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
-        
+//        view.backgroundColor = .red
+
         return table
     }()
     
@@ -25,26 +27,32 @@ class MainViewController: ViewController {
 
         tableView.dataSource = self
         tableView.delegate = self
-        view.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
+        view.backgroundColor = .green
+//        UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
         view.addSubview(tableView)
         setupConstraints()
         let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
         tableView.tableHeaderView = headerView
+        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
+        navigationItem.backButtonDisplayMode = .minimal
+        viewWillAppear(true)
+        view.insetsLayoutMarginsFromSafeArea = true
         
-        // Do any additional setup after loading the view.
     }
     
     
     
     override func setupConstraints() {
         tableView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-//            make.top.bottom.equalToSuperview().inset(40)
-//            make.height.equalTo(200)
+            make.leading.trailing.bottom.top.equalToSuperview()
+
         }
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.navigationItem.hidesBackButton = true
+    }
     
     
 }

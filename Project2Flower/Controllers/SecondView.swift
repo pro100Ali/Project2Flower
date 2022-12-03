@@ -52,8 +52,15 @@ class SecondView: UIViewController {
         email.addTarget(self, action: #selector(self.validateFields), for: .editingChanged)
         login.addTarget(self, action: #selector(self.validateFields), for: .editingChanged)
         loginBtn.addTarget(self, action: #selector(self.onClickButton), for: .touchUpInside)
+//        self.navigationItem.setHidesBackButton(true, animated: true)
+        self.navigationItem.setLeftBarButtonItems(nil, animated: true)
+          self.navigationItem.setHidesBackButton(true, animated:true)
         // Do any additional setup after loading the view.
+        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
+
     }
+    
+   
     
     @objc private func validateFields() {
         loginBtn.isEnabled = email.text != "" && email.text != ""

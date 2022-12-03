@@ -14,7 +14,7 @@ final class HeaderView: UIView {
     private var searchBar:  UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.tintColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
-        searchBar.backgroundColor = .red
+//        searchBar.backgroundColor = .red
         return searchBar
     }()
     override init(frame: CGRect) {
@@ -54,8 +54,8 @@ extension HeaderView {
         searchBar.snp.makeConstraints{ make in
             make.edges.equalToSuperview()
 //            make.top.bottom.equalToSuperview()
-            make.top.bottom.equalToSuperview()
-
+//            make.top.bottom.equalToSuperview()
+            make.top.equalToSuperview()
 //            make.bottom.top.equalToSuperview().inset(10)
         }
     }

@@ -23,6 +23,7 @@ class PageSliderViewCell: UICollectionViewCell {
         super.init(frame: frame)
         setup()
         setupConstraints()
+        contentView.backgroundColor = .red
     }
     
     required init?(coder: NSCoder) {

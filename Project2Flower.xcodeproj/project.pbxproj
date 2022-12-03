@@ -27,7 +27,9 @@
 		419BC2D229225C11007E12FE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419BC2D129225C11007E12FE /* CollectionViewCell.swift */; };
 		41C0F7D3292411C4005D4874 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C0F7D2292411C4005D4874 /* TabBar.swift */; };
 		41C0F7D52924143C005D4874 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C0F7D42924143C005D4874 /* TabBarViewController.swift */; };
-		64C9C33C63C70E5485ECCC34 /* Pods_Project2Flower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E87D69F40E85C032B5B5C32 /* Pods_Project2Flower.framework */; };
+		41D734392937587D000C58CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41D734382937587D000C58CD /* GoogleService-Info.plist */; };
+		41D7343B29375BC4000C58CD /* ViewControllerForSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D7343A29375BC4000C58CD /* ViewControllerForSign.swift */; };
+		41D7344929381247000C58CD /* Pods_Project2Flower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E87D69F40E85C032B5B5C32 /* Pods_Project2Flower.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		419BC2D129225C11007E12FE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		41C0F7D2292411C4005D4874 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		41C0F7D42924143C005D4874 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		41D734382937587D000C58CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41D7343A29375BC4000C58CD /* ViewControllerForSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerForSign.swift; sourceTree = "<group>"; };
 		7A2529B5A675747892C310E6 /* Pods-Project2Flower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project2Flower.release.xcconfig"; path = "Target Support Files/Pods-Project2Flower/Pods-Project2Flower.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64C9C33C63C70E5485ECCC34 /* Pods_Project2Flower.framework in Frameworks */,
+				41D7344929381247000C58CD /* Pods_Project2Flower.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +115,7 @@
 				413EA3062918CEF30039C809 /* Info.plist */,
 				41C0F7D2292411C4005D4874 /* TabBar.swift */,
 				41345B1E292D793E00EC8FEC /* Constants.swift */,
+				41D734382937587D000C58CD /* GoogleService-Info.plist */,
 			);
 			path = Project2Flower;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				415164602920D120006EF438 /* ThirdView.swift */,
 				4134F0D4292031830024835D /* SecondView.swift */,
 				41C0F7D42924143C005D4874 /* TabBarViewController.swift */,
+				41D7343A29375BC4000C58CD /* ViewControllerForSign.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +197,8 @@
 			dependencies = (
 			);
 			name = Project2Flower;
+			packageProductDependencies = (
+			);
 			productName = Project2Flower;
 			productReference = 413EA2F52918CEF20039C809 /* Project2Flower.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +228,7 @@
 			);
 			mainGroup = 413EA2EC2918CEF20039C809;
 			packageReferences = (
+				41D7343C29380E44000C58CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 413EA2F62918CEF20039C809 /* Products */;
 			projectDirPath = "";
@@ -237,6 +246,7 @@
 			files = (
 				413EA3052918CEF30039C809 /* LaunchScreen.storyboard in Resources */,
 				413EA3022918CEF30039C809 /* Assets.xcassets in Resources */,
+				41D734392937587D000C58CD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +305,7 @@
 				413EA2FD2918CEF20039C809 /* ViewController.swift in Sources */,
 				41C0F7D52924143C005D4874 /* TabBarViewController.swift in Sources */,
 				417A517B29360F580035EB91 /* ThreeCaseCollectionViewCell.swift in Sources */,
+				41D7343B29375BC4000C58CD /* ViewControllerForSign.swift in Sources */,
 				4134F0D5292031830024835D /* SecondView.swift in Sources */,
 				417A5184293639510035EB91 /* PageSlider.swift in Sources */,
 				4134F0D7292044D80024835D /* User.swift in Sources */,
@@ -446,7 +457,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8BB3UWB5NY;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Project2Flower/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -474,7 +485,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8BB3UWB5NY;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Project2Flower/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -516,6 +527,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41D7343C29380E44000C58CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 413EA2ED2918CEF20039C809 /* Project object */;
 }

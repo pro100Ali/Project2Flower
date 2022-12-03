@@ -11,6 +11,7 @@ import SnapKit
 class ViewController: UIViewController {
     
 
+
     lazy private var tableView: UITableView = {
         var table = UITableView(frame: .zero)
         table.backgroundColor = .tintColor
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
    
         let newViewController = SecondView()
         self.navigationController?.pushViewController(newViewController, animated: true)
+
     }
 
     
@@ -76,7 +78,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .tintColor
-        
+        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
+
         setupViews()
         setupConstraints()
 

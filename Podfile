@@ -7,4 +7,6 @@ target 'Project2Flower' do
 
   # Pods for Project2Flower
 pod 'SnapKit'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
 end

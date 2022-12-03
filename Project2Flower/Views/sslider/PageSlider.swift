@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SnapKit
 class PageSlider: UITableViewCell {
 
     
@@ -19,6 +19,7 @@ class PageSlider: UITableViewCell {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(PageSliderViewCell.self, forCellWithReuseIdentifier: Constants.Identifiers.pageSlider)
 //        collectionView.backgroundColor = .clear
+        
         collectionView.backgroundColor = .purple
         collectionView.layer.cornerRadius = 20
         collectionView.showsHorizontalScrollIndicator = false
@@ -40,7 +41,7 @@ class PageSlider: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
+        contentView.backgroundColor = .red
         
 //         UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
 
@@ -55,7 +56,7 @@ class PageSlider: UITableViewCell {
         setup()
         makeConstraints()
         
-//        startTimer()
+        startTimer()
     }
     required init?(coder:NSCoder) {
         fatalError("init(coder has not been implemented")
@@ -65,7 +66,7 @@ class PageSlider: UITableViewCell {
     
     @objc func moveToNextIndex() {
         
-        if currentCellIndex < arrayImages.count - 1{
+        if currentCellIndex < arrayImages.count - 1 {
         currentCellIndex += 1
         }else{
             currentCellIndex = 0
