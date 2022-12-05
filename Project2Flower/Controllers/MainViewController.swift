@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 class MainViewController: ViewController {
-    
+    var aha = true
     lazy private var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.layer.cornerRadius = 40

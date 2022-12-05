@@ -30,19 +30,31 @@ class ThreeCaseCollectionViewCell: UICollectionViewCell {
 
         return label
     }()
-    
-    
-    
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(flower1)
         contentView.addSubview(nameOfSections)
         setupContraints()
         contentView.layer.cornerRadius = 20
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .red
     }
+    
+    
+    override var isHighlighted: Bool {
+        didSet {
+            nameOfSections.textColor = isHighlighted ? UIColor.lightGray : .label
+            contentView.backgroundColor = isHighlighted ? UIColor.lightGray : .lightGray
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            nameOfSections.textColor = isSelected ? UIColor.lightGray : .label
+            contentView.backgroundColor = isSelected ? UIColor.blue : .blue
+        }
+    }
+    
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -21,7 +21,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     lazy private var timeLabel: UILabel = {
         let label = UILabel()
-        label.text = "now"
+        label.text = "Aloe plant"
         return label
     }()
     lazy private var price: UILabel = {
@@ -33,7 +33,7 @@ class CollectionViewCell: UICollectionViewCell {
     }()
     
     
-    lazy private var conditionImageView: UIImageView = {
+    lazy  var conditionImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "flower3.png")
         
@@ -55,18 +55,18 @@ class CollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError()
     }
-    lazy private var button: UIButton = {
-        let button = UIButton(frame: .zero)
-        button.backgroundColor = .systemGreen
-        button.setTitle("Get started", for: .normal)
-        button.titleLabel?.font = UIFont(name: "Futura-Bold", size: 10)
-        button.layer.cornerRadius = 10
-        button.layer.masksToBounds = true
-        
-        //        button.isHovered = true
-        
-        return button
-    }()
+//    lazy private var button: UIButton = {
+//        let button = UIButton(frame: .zero)
+//        button.backgroundColor = .systemGreen
+//        button.setTitle("Get started", for: .normal)
+//        button.titleLabel?.font = UIFont(name: "Futura-Bold", size: 10)
+//        button.layer.cornerRadius = 10
+//        button.layer.masksToBounds = true
+//
+//        //        button.isHovered = true
+//
+//        return button
+//    }()
     
     
     
@@ -78,6 +78,7 @@ class CollectionViewCell: UICollectionViewCell {
         let bt = UIButton()
         let imageIcon = UIImage(systemName: "heart")?.withTintColor(.black, renderingMode: .alwaysOriginal)
         bt.setImage(imageIcon, for:.normal)
+        
         bt.addTarget(self, action: #selector(likeButtonChanged), for:.touchUpInside)
         return bt
         
@@ -109,28 +110,33 @@ class CollectionViewCell: UICollectionViewCell {
     
     func setupConstraints() {
         contentView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(10)
-            make.bottom.top.equalToSuperview().inset(10)
+            make.leading.trailing.equalToSuperview().inset(3)
+            make.bottom.equalToSuperview().inset(50)
+            make.top.equalToSuperview()
         }
         conditionImageView.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(35)
-            make.top.bottom.equalToSuperview().inset(25)
+            make.leading.trailing.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(20)
+            make.bottom.equalToSuperview().inset(80)
+            
         }
         price.snp.makeConstraints { make in
-            make.top.equalTo(conditionImageView.snp.bottom)
+            make.top.equalTo(timeLabel.snp.bottom).offset(2)
         }
-        button.snp.makeConstraints{ make in
-            make.top.equalTo(conditionImageView.snp.bottom).offset(2)
+        timeLabel.snp.makeConstraints{ make in
+            make.top.equalTo(conditionImageView.snp.bottom).offset(30)
             make.leading.equalTo(price.snp.trailing).inset(30)
         }
         foodLikeButton.snp.makeConstraints { make in
+            make.trailing.equalToSuperview()
+           
         }
         
     }
     func setup() {
         contentView.addSubview(conditionImageView)
         contentView.addSubview(price)
-        contentView.addSubview(button)
+        contentView.addSubview(timeLabel)
         contentView.addSubview(foodLikeButton)
     }
 }

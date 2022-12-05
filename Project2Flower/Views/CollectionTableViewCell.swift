@@ -12,7 +12,7 @@ class CollectionTableViewCell: UITableViewCell {
     
     lazy private var collectionViewCell: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 160, height: 200)
+        layout.itemSize = CGSize(width: 180, height: 250)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: Constants.Identifiers.collectionViewCell)
@@ -24,6 +24,8 @@ class CollectionTableViewCell: UITableViewCell {
         return collectionView
     }()
     
+    
+   
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -57,8 +59,8 @@ class CollectionTableViewCell: UITableViewCell {
         }
         collectionViewCell.snp.makeConstraints { make in
 //            make.edges.equalToSuperview()
-            make.leading.trailing.equalToSuperview().inset(20)
-            make.top.bottom.equalToSuperview().inset(5)
+            make.leading.trailing.equalToSuperview().inset(10)
+            make.top.bottom.equalToSuperview().inset(25)
 
         }
         
@@ -73,6 +75,8 @@ extension CollectionTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Identifiers.collectionViewCell, for: indexPath) as! CollectionViewCell
+        
+        cell.conditionImageView.image = UIImage(named: "flower3.png")
         return cell
     }
     

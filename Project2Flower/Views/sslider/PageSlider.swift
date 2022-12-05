@@ -32,6 +32,7 @@ class PageSlider: UITableViewCell {
      lazy private var pageController: UIPageControl = {
          let pageControl = UIPageControl()
          pageControl.numberOfPages = 5
+
 //         pageControl.backgroundColor = .systemBlue
          return pageControl
      }()
