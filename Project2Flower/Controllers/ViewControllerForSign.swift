@@ -11,6 +11,7 @@ import SnapKit
 import FirebaseAuth
 
 class ViewControllerForSign: UIViewController {
+//    var newVariable = emailField.text
     
     private let label: UILabel = {
         let label = UILabel()
@@ -50,11 +51,10 @@ class ViewControllerForSign: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-//        setupConstraints()
         view.backgroundColor = .yellow
-        // Do any additional setup after loading the view.
-        
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -81,8 +81,9 @@ class ViewControllerForSign: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         emailField.becomeFirstResponder()
+        
     }
-    //
+
     
     
     
@@ -138,7 +139,7 @@ class ViewControllerForSign: UIViewController {
                 strongSelf.showCreateAccount(email: email, password: password)
                 return
             }
-            print("you have signed in")
+            print("you have signed in)")
             strongSelf.label.isHidden = true
             strongSelf.emailField.isHidden = true
             strongSelf.passwordField.isHidden = true

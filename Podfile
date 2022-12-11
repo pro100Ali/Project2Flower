@@ -6,7 +6,8 @@ target 'Project2Flower' do
   use_frameworks!
 
   # Pods for Project2Flower
-pod 'SnapKit'
-pod 'Firebase/Core'
-pod 'Firebase/Auth'
+  pod 'SnapKit'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end

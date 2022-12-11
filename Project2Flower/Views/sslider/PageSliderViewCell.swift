@@ -34,7 +34,6 @@ class PageSliderViewCell: UICollectionViewCell {
     func setupConstraints() {
         pageSlider.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-//            make.top.bottom.equalToSuperview().inset(20)
         }
         
 

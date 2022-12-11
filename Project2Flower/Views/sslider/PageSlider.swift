@@ -33,11 +33,9 @@ class PageSlider: UITableViewCell {
          let pageControl = UIPageControl()
          pageControl.numberOfPages = 5
 
-//         pageControl.backgroundColor = .systemBlue
          return pageControl
      }()
-//     pageController.frame = CGRect(x: 10, y: contentView.frame.size.height-100, width: contentView.frame.size.width-20, height: 70)
-     
+
      
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -48,7 +46,6 @@ class PageSlider: UITableViewCell {
 
         
         pageController.numberOfPages = arrayImages.count
-//        contentView.backgroundColor = .green
         
         
         collectionViewCell.delegate = self
@@ -68,16 +65,15 @@ class PageSlider: UITableViewCell {
     @objc func moveToNextIndex() {
         
         if currentCellIndex < arrayImages.count - 1 {
-        currentCellIndex += 1
+            currentCellIndex += 1
         }else{
             currentCellIndex = 0
         }
         
         
         collectionViewCell.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0), at: .centeredHorizontally, animated: true)
-//        collectionView.scrollToItem(at: IndexPath(item: currentCellIndex, section: 0),
-//                                    at: .centeredHorizontally, animated: true)
-        pageController.currentPage = currentCellIndex
+
+//        pageController.currentPage = currentCellIndex
         
     }
     
@@ -97,18 +93,14 @@ class PageSlider: UITableViewCell {
     func makeConstraints() {
         contentView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-//            make.bottom.equalToSuperview().inset(30)
         }
         collectionViewCell.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(20)
             make.top.bottom.equalToSuperview().inset(10)
-//            make.top.equalTo(30)
-            
         }
-        pageController.snp.makeConstraints { make in
-            make.bottom.centerX.equalToSuperview()
-            
-        }
+//        pageController.snp.makeConstraints { make in
+//            make.bottom.centerX.equalToSuperview()
+//        }
     }
 }
 
@@ -120,8 +112,6 @@ extension PageSlider: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        collectionView.scrollToItem(at: indexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
-
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Identifiers.pageSlider, for: indexPath) as! PageSliderViewCell
         
         cell.pageSlider.image = UIImage(named: arrayImages[indexPath.row])

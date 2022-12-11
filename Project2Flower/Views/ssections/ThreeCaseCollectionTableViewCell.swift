@@ -15,9 +15,7 @@ class ThreeCaseCollectionTableViewCell: UITableViewCell {
     lazy private var collectionViewCell: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 120, height: 120)
-        layout.scrollDirection = .horizontal
-        //        la.layer.cornerRadius = 0.5
-        
+        layout.scrollDirection = .horizontal        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(ThreeCaseCollectionViewCell.self, forCellWithReuseIdentifier: Constants.Identifiers.threeCaseCollectionViewCell)
         collectionView.backgroundColor = .clear

@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import FirebaseAuth
+//import FirebaseDatabaseSwif
+
 
 class NetworkService {
+
+    
     static let shared = NetworkService()
     func getLoggedInUser() -> User? {
         return user

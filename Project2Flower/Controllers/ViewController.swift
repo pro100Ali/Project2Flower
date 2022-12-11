@@ -78,7 +78,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         view.backgroundColor = .tintColor
-        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
+//        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
 
         setupViews()
         setupConstraints()

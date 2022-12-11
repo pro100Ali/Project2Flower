@@ -22,6 +22,21 @@ class ThreeCaseCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    lazy var imageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "flower.png")
+        return image
+    }()
+    
+    lazy var button: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .red
+        button.layer.cornerRadius = 40
+//        button.setImage(UIImage(imageView))
+        
+        return button
+    }()
+    
     lazy var nameOfSections: UILabel = {
         let label = UILabel()
         label.text = " Flower"
@@ -34,9 +49,11 @@ class ThreeCaseCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.addSubview(flower1)
         contentView.addSubview(nameOfSections)
+        contentView.addSubview(button)
         setupContraints()
         contentView.layer.cornerRadius = 20
         contentView.backgroundColor = .red
+        contentView.addSubview(imageView)
     }
     
     
@@ -46,9 +63,10 @@ class ThreeCaseCollectionViewCell: UICollectionViewCell {
             contentView.backgroundColor = isHighlighted ? UIColor.lightGray : .lightGray
         }
     }
-    
+    var enable = false
     override var isSelected: Bool {
         didSet {
+            enable = false
             nameOfSections.textColor = isSelected ? UIColor.lightGray : .label
             contentView.backgroundColor = isSelected ? UIColor.blue : .blue
         }
@@ -72,6 +90,12 @@ class ThreeCaseCollectionViewCell: UICollectionViewCell {
         nameOfSections.snp.makeConstraints { make in
             make.top.equalTo(flower1.snp.bottom)
             make.leading.trailing.equalTo(30)
+        }
+        button.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        imageView.snp.makeConstraints { make in
+//            make.center.equalToSuperview()
         }
     }
 }

@@ -32,8 +32,8 @@ class TabBarViewController: UITabBarController {
         tabBar.tintColor = .label
         
         setViewControllers([vc1,vc2,vc3], animated: true)
-        navigationItem.backButtonDisplayMode = .minimal
-        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
+//        navigationItem.backButtonDisplayMode = .minimal
+//        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
 
         
         

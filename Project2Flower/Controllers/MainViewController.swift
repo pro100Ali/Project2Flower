@@ -8,6 +8,8 @@
 import UIKit
 import SnapKit
 class MainViewController: ViewController {
+    
+
     var aha = true
     lazy private var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
@@ -15,14 +17,14 @@ class MainViewController: ViewController {
         table.separatorStyle = .none
         table.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
 //        view.backgroundColor = .red
-
+        
         return table
     }()
     
     
     
     override func viewDidLoad() {
-        
+//        closure()
 //        weatherManager.delegate = weatherTableView.tableHeaderView as! any WeatherManagerDelegate
 
         tableView.dataSource = self
@@ -33,8 +35,8 @@ class MainViewController: ViewController {
         setupConstraints()
         let headerView = HeaderView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 50))
         tableView.tableHeaderView = headerView
-        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
-        navigationItem.backButtonDisplayMode = .minimal
+//        self.parent?.navigationItem.setHidesBackButton(true, animated: false)
+//        navigationItem.backButtonDisplayMode = .minimal
         viewWillAppear(true)
         view.insetsLayoutMarginsFromSafeArea = true
         
@@ -45,6 +47,7 @@ class MainViewController: ViewController {
     override func setupConstraints() {
         tableView.snp.makeConstraints { make in
             make.leading.trailing.bottom.top.equalToSuperview()
+            
 
         }
     }
@@ -52,6 +55,7 @@ class MainViewController: ViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.navigationItem.hidesBackButton = true
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     

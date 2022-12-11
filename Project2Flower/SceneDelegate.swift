@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = TabBarViewController()
         window?.makeKeyAndVisible()
-        let fir = TabBarViewController()
+        let fir = ViewControllerForSign()
         self.window?.rootViewController = UINavigationController(rootViewController: fir)
     }
 

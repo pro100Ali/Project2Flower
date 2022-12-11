@@ -113,8 +113,8 @@
 				413EA3012918CEF30039C809 /* Assets.xcassets */,
 				413EA3032918CEF30039C809 /* LaunchScreen.storyboard */,
 				413EA3062918CEF30039C809 /* Info.plist */,
-				41C0F7D2292411C4005D4874 /* TabBar.swift */,
 				41345B1E292D793E00EC8FEC /* Constants.swift */,
+				41C0F7D2292411C4005D4874 /* TabBar.swift */,
 				41D734382937587D000C58CD /* GoogleService-Info.plist */,
 			);
 			path = Project2Flower;
@@ -229,6 +229,7 @@
 			mainGroup = 413EA2EC2918CEF20039C809;
 			packageReferences = (
 				41D7343C29380E44000C58CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				41B0F49F293DCD7900407E74 /* XCRemoteSwiftPackageReference "plant-shop-api" */,
 			);
 			productRefGroup = 413EA2F62918CEF20039C809 /* Products */;
 			projectDirPath = "";
@@ -464,6 +465,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,6 +494,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,6 +532,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		41B0F49F293DCD7900407E74 /* XCRemoteSwiftPackageReference "plant-shop-api" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Asilo5/plant-shop-api";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		41D7343C29380E44000C58CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
