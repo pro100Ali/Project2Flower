@@ -18,6 +18,7 @@ class PageSliderViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,6 +36,7 @@ class PageSliderViewCell: UICollectionViewCell {
         pageSlider.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        
         
 
     }

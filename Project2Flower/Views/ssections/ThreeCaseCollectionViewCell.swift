@@ -45,22 +45,29 @@ class ThreeCaseCollectionViewCell: UICollectionViewCell {
 
         return label
     }()
+    
+
+    @objc func handleLoginRegisterChange () {
+        print("12344214kmfd")
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(flower1)
         contentView.addSubview(nameOfSections)
-        contentView.addSubview(button)
+//        contentView.addSubview(button)
         setupContraints()
         contentView.layer.cornerRadius = 20
-        contentView.backgroundColor = .red
+        contentView.backgroundColor = .white
         contentView.addSubview(imageView)
+//        contentView.addSubview(segmentControl)
     }
     
     
     override var isHighlighted: Bool {
         didSet {
             nameOfSections.textColor = isHighlighted ? UIColor.lightGray : .label
-            contentView.backgroundColor = isHighlighted ? UIColor.lightGray : .lightGray
+//            contentView.backgroundColor = isHighlighted ? UIColor.lightGray : .lightGray
         }
     }
     var enable = false
@@ -68,7 +75,7 @@ class ThreeCaseCollectionViewCell: UICollectionViewCell {
         didSet {
             enable = false
             nameOfSections.textColor = isSelected ? UIColor.lightGray : .label
-            contentView.backgroundColor = isSelected ? UIColor.blue : .blue
+//            contentView.backgroundColor = isSelected ? UIColor.blue : .blue
         }
     }
     
@@ -91,12 +98,15 @@ class ThreeCaseCollectionViewCell: UICollectionViewCell {
             make.top.equalTo(flower1.snp.bottom)
             make.leading.trailing.equalTo(30)
         }
-        button.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+//        button.snp.makeConstraints { make in
+//            make.edges.equalToSuperview()
+//        }
         imageView.snp.makeConstraints { make in
 //            make.center.equalToSuperview()
         }
+//        segmentControl.snp.makeConstraints { make in
+//        }
+        
     }
 }
 

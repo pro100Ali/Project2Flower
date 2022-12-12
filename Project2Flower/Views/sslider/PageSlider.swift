@@ -40,9 +40,9 @@ class PageSlider: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .red
+        contentView.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
+
         
-//         UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
 
         
         pageController.numberOfPages = arrayImages.count

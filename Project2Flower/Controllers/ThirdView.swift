@@ -7,17 +7,26 @@
 
 import UIKit
 import SnapKit
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 class ThirdView: UITableViewController {
     
     var user: User!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .purple
         
+
+        //            FirebaseDatabase.database().reference(fromURL: "https://project2flower-default-rtdb.firebaseio.com/")
+        
+//            let uid: String = (Auth.auth().currentUser?.uid)!
+//            Database.database().reference().child(uid).setValue("users")
+
+        
         user = NetworkService.shared.getLoggedInUser()
+//        print(user)
         welcomeUser()
         setup()
         makeConstraints()
@@ -27,27 +36,20 @@ class ThirdView: UITableViewController {
         let text =  UITextView(frame: .zero)
         text.text = "Welcome"
         text.backgroundColor = .systemYellow
+        
         return text
     }()
-    
-    
-    
-    
-//    private var tableCollection: UICollectionView {
-//        let table = UICollectionView(frame: .zero)
-////        table.text = "Welcome"
-//        table.backgroundColor = .red
-//        return table
-//    }()
-    
+    //    private var tableCollection: UICollectionView {
+    //        let table = UICollectionView(frame: .zero)
+//            table.text = "Welcome"
+    //        table.backgroundColor = .red
+    //        return table
+    //    }()
     private func welcomeUser() {
         welcomeLbl.text = "Hello, \(user?.firstName) \(user?.lastName)"
     }
     func setup() {
-//        view.addSubview(welcomeUser())
         view.addSubview(welcomeLbl)
-//        view.addSubview(tableCollection)
-        
     }
     
     func makeConstraints() {
@@ -58,67 +60,10 @@ class ThirdView: UITableViewController {
             make.top.equalToSuperview().inset(300)
             make.bottom.equalToSuperview().inset(300)
         }
-//        tableCollection.snp.makeConstraints { make in
-//            make.center.equalToSuperview()
-//            make.leading.equalToSuperview().inset(90)
-//        }
+        //        tableCollection.snp.makeConstraints { make in
+        //            make.center.equalToSuperview()
+        //            make.leading.equalToSuperview().inset(90)
+        //        }
     }
     
 }
-
-
-//
-//  TabBarViewController.swift
-//  Project2Flower
-//
-//  Created by Али  on 16.11.2022.
-//
-
-//import SnapKit
-
-
-    
-    
-    
-//
-//    class HomeVC: UIViewController {
-//        override func viewDidLoad() {
-//            super.viewDidLoad()
-//            view.backgroundColor = .lightGray
-//
-//        }
-//    }
-//
-//    class FavoriteVC: UIViewController {
-//        override func viewDidLoad() {
-//            super.viewDidLoad()
-//            view.backgroundColor = .blue
-//
-//
-//        }
-//    }
-//
-//    class NotifyVC: UIViewController {
-//        override func viewDidLoad() {
-//            super.viewDidLoad()
-//            view.backgroundColor = .red
-//
-//        }
-//    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
-
-
-
-

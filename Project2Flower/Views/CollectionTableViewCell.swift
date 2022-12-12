@@ -20,7 +20,7 @@ class CollectionTableViewCell: UITableViewCell {
 //        collectionView.backgroundColor = .purple
 //        collectionView.layer.cornerRadius = 40
         collectionView.showsHorizontalScrollIndicator = false
-        
+        collectionView.isScrollEnabled = false
         return collectionView
     }()
     

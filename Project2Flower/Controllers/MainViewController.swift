@@ -98,7 +98,7 @@ extension MainViewController : UITableViewDelegate {
         case 1:
             return 200
         default:
-            return 700
+            return 520
         }
     }
     

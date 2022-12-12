@@ -42,8 +42,7 @@ class SecondView: UIViewController {
         return button
     }()
     
-    
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemGreen
@@ -55,7 +54,6 @@ class SecondView: UIViewController {
 //        self.navigationItem.setHidesBackButton(true, animated: true)
         self.navigationItem.setLeftBarButtonItems(nil, animated: true)
           self.navigationItem.setHidesBackButton(true, animated:true)
-        // Do any additional setup after loading the view.
         self.parent?.navigationItem.setHidesBackButton(true, animated: false)
 
     }
@@ -76,7 +74,7 @@ class SecondView: UIViewController {
         }
     }
     func goToHomePage() {
-        let newViewController = TabBarViewController()
+        let newViewController = ViewControllerForSign()
         self.navigationController?.pushViewController(newViewController, animated: true)
     }
     
